@@ -1,6 +1,8 @@
 use std::io;
 use std::num::ParseIntError;
 
+mod pinia;
+
 fn main() {
     let mut parsed_input: Result<u32, ParseIntError>;
 
@@ -37,7 +39,7 @@ fn print_options() {
 }
 
 fn install_pinia() {
-    println!("Installing Pinia...");
+    pinia::install();
 }
 
 fn install_husky() {
